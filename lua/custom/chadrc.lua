@@ -9,7 +9,7 @@ M.mappings = require "custom.mappings"
 
 M.ui = {
   theme_toggle = { "gruvchad", "catppuccin_latte" },
-  theme = "gruvchad",
+  theme = "tokyonight",
 }
 
 M.plugins = {
@@ -26,6 +26,13 @@ M.plugins = {
         require "custom.plugins.null-ls"
       end,
     },
+    ["akinsho/toggleterm.nvim"] = {
+      after = "nvim-lspconfig",
+      config = function()
+        require "custom.plugins.toggleterm"
+      end,
+    },
+
   }
 }
 
